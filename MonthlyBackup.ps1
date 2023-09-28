@@ -20,10 +20,10 @@ $Source3 = 'D:\Wallpapers'
 $Dest1 = '\\192.168.50.164\Personal_Vault\Jason_Safe\Photography_Backup'
 
 $Source4 = 'D:\HDD jason\Documents\Jason Misc. Important Stuff'
+$Dest2 = '\\192.168.50.164\Personal_Vault\Jason_Safe\Jason_Documents'
+
 $Source5 = 'D:\ISO_Library'
-$Dest2 = '\\192.168.50.164\Personal_Vault\Jason_Safe'
-
-
+$Dest3 = '\\192.168.50.164\Personal_Vault\Jason_Safe\ISO_Library'
 
 #~~~~~~~~~~~~~~~~~ Script begins here ~~~~~~~~~~~~~~~~~
 
@@ -40,7 +40,7 @@ echo " " >>$LogLocal
 robocopy $Source4 $Dest2 /s /e /b /z /xo /ts /tee /ns /np /log+:$LogLocal
 echo " " >>$LogLocal
 
-robocopy $Source5 $Dest2 /s /e /b /z /xo /ts /tee /ns /np /log+:$LogLocal
+robocopy $Source5 $Dest3 /s /e /b /z /xo /ts /tee /ns /np /log+:$LogLocal
 echo " " >>$LogLocal
 
 echo "------------------------------------------------------------------------------`r`n" >> $LogLocal
