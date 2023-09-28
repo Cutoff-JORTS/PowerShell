@@ -15,10 +15,13 @@ $FileCount = $NewXfers.count
 $date= date
 
 $Source1 = 'D:\HDD jason\Pictures'
-$Source2 = 'D:\HDD jason\Documents\Jason Misc. Important Stuff'
+$Source2 = 'D:\HDD jason\Twitch Logos'
 $Source3 = 'D:\Wallpapers'
-$Source4 = 'D:\HDD jason\Twitch Logos'
 $Dest1 = '\\192.168.50.164\Personal_Vault\Jason_Safe\Photography_Backup'
+
+$Source4 = 'D:\HDD jason\Documents\Jason Misc. Important Stuff'
+$Source5 = 'D:\ISO_Library'
+$Dest2 = '\\192.168.50.164\Personal_Vault\Jason_Safe'
 
 
 
@@ -34,9 +37,12 @@ echo " " >>$LogLocal
 robocopy $Source3 $Dest1 /s /e /b /z /xo /ts /tee /ns /np /log+:$LogLocal
 echo " " >>$LogLocal
 
-
-robocopy $Source4 $Dest1 /s /e /b /z /xo /ts /tee /ns /np /log+:$LogLocal
+robocopy $Source4 $Dest2 /s /e /b /z /xo /ts /tee /ns /np /log+:$LogLocal
 echo " " >>$LogLocal
+
+robocopy $Source5 $Dest2 /s /e /b /z /xo /ts /tee /ns /np /log+:$LogLocal
+echo " " >>$LogLocal
+
 echo "------------------------------------------------------------------------------`r`n" >> $LogLocal
 
 echo "======================================================================" > $ShortLog
