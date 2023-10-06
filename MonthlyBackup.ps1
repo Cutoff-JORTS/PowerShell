@@ -14,7 +14,6 @@ $NewXfers = Get-Content $LogLocal -ReadCount 1000 | foreach {$_ -match "New File
 $FileCount = $NewXfers.count
 $date= date
 
-$Source1 = 'D:\HDD jason\Pictures'
 $Source2 = 'D:\HDD jason\Twitch Logos'
 $Source3 = 'D:\Wallpapers'
 $Dest1 = '\\192.168.50.164\Personal_Vault\Jason_Safe\Photography_Backup'
@@ -24,6 +23,9 @@ $Dest2 = '\\192.168.50.164\Personal_Vault\Jason_Safe\Jason_Documents'
 
 $Source5 = 'D:\ISO_Library'
 $Dest3 = '\\192.168.50.164\Personal_Vault\Jason_Safe\ISO_Library'
+
+$Source6 = 'D:\HDD jason\Photography'
+$Dest4 = '\\192.168.50.164\Personal_Vault\Jason_Safe\Photography'
 
 #~~~~~~~~~~~~~~~~~ Script begins here ~~~~~~~~~~~~~~~~~
 
