@@ -45,6 +45,9 @@ echo " " >>$LogLocal
 robocopy $Source5 $Dest3 /s /e /b /z /xo /ts /tee /ns /np /log+:$LogLocal
 echo " " >>$LogLocal
 
+robocopy $Source6 $Dest4 /s /e /b /z /xo /ts /tee /ns /np /log+:$LogLocal
+echo " " >>$LogLocal
+
 echo "------------------------------------------------------------------------------`r`n" >> $LogLocal
 
 echo "======================================================================" > $ShortLog
