@@ -16,7 +16,7 @@ $date= date
 
 $Source2 = 'D:\HDD jason\Twitch Logos'
 $Source3 = 'D:\Wallpapers'
-$Dest1 = '\\192.168.50.164\Personal_Vault\Jason_Safe\Photography_Backup'
+$Dest1 = '\\192.168.50.164\Personal_Vault\Jason_Safe\Photography_Backup\Wallpapers'
 
 $Source4 = 'D:\HDD jason\Documents\Jason Misc. Important Stuff'
 $Dest2 = '\\192.168.50.164\Personal_Vault\Jason_Safe\Jason_Documents'
