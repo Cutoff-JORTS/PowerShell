@@ -14,10 +14,10 @@ $NewXfers = Get-Content $LogLocal -ReadCount 1000 | foreach {$_ -match "New File
 $FileCount = $NewXfers.count
 $date= date
 
-$Source2 = 'D:\HDD jason\Twitch Logos'
 $Source3 = 'D:\Wallpapers'
 $Dest1 = '\\192.168.50.164\Personal_Vault\Jason_Safe\Photography_Backup\Wallpapers'
 
+$Source2 = 'D:\HDD jason\Twitch Logos'
 $Source4 = 'D:\HDD jason\Documents\Jason Misc. Important Stuff'
 $Dest2 = '\\192.168.50.164\Personal_Vault\Jason_Safe\Jason_Documents'
 
@@ -33,7 +33,7 @@ echo "--------------------------------------------------------------------------
 robocopy $Source1 $Dest1 /s /e /b /z /xo /ts /tee /np /log+:$LogLocal
 echo " " >>$LogLocal
 
-robocopy $Source2 $Dest1 /s /e /b /z /xo /ts /tee /ns /np /log+:$LogLocal
+robocopy $Source2 $Dest2 /s /e /b /z /xo /ts /tee /ns /np /log+:$LogLocal
 echo " " >>$LogLocal
 
 robocopy $Source3 $Dest1 /s /e /b /z /xo /ts /tee /ns /np /log+:$LogLocal
