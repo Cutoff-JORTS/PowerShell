@@ -5,20 +5,20 @@
 #~~~~~~~~~~~~~~~~~ Establishing Variables ~~~~~~~~~~~~~~~~~ 
 	#note - you can change source or destination folders here without touching code
 
-$LogLocal = 'D:\Log_Files\Nightly-Backup-Log.txt'							#Local log = full detail
-$ShortLog = 'D:\Log_Files\Nightly-Summary.txt'								#Local Log = summary
-$LogRemote = '\\192.168.50.164\Personal_Vault\Nightly-Backup-Log.txt'		#Remote Log = full detail + summary
+$LogLocal = 'FILEPATH_GOES_HERE'						#Local log = full detal
+$ShortLog = 'FILEPATH_GOES_HERE'						#Local Log = summay
+#$LogRemote = 'FILEPATH_GOES_HERE'						#*Optional - Uncomment to include (full detail + summay)
 
 
 $NewXfers = Get-Content $LogLocal -ReadCount 1000 | foreach {$_ -match "New File"}
 $FileCount = $NewXfers.count
 $date= date
 
-$Source1 = 'D:\HDD jason\Dungeons_and_Dragons\'
-$Dest1 = '\\192.168.50.164\Dungeons_and_Dragons\'
+$Source1 = 'FILEPATH_GOES_HERE'
+$Dest1 = 'FILEPATH_GOES_HERE'
 
-$Source2 = 'D:\HDD jason\Documents\Jason Misc. Important Stuff'
-$Dest2 = '\\192.168.50.164\Personal_Vault\Jason_Safe\Jason_Documents'
+$Source2 = 'FILEPATH_GOES_HERE'
+$Dest2 = 'FILEPATH_GOES_HERE'
 
 #~~~~~~~~~~~~~~~~~ Script begins here ~~~~~~~~~~~~~~~~~
 
