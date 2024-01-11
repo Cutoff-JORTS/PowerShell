@@ -20,6 +20,9 @@ $Dest1 = '\\192.168.50.164\Dungeons_and_Dragons\'
 $Source2 = 'D:\HDD jason\Documents\Jason Misc. Important Stuff'
 $Dest2 = '\\192.168.50.164\Personal_Vault\Jason_Safe\Jason_Documents'
 
+$Source3 = 'D:\HDD jason\Videos'
+$Dest3 = '\\192.168.50.164\Personal_Vault\Jason_Safe\Videos'
+
 #~~~~~~~~~~~~~~~~~ Script begins here ~~~~~~~~~~~~~~~~~
 
 echo "------------------------------------------------------------------------------`r`n" > $LogLocal
@@ -31,6 +34,12 @@ echo "--------------------------------------------------------------------------
 robocopy $Source2 $Dest2 /s /e /b /z /xo /ts /tee /ns /np /log+:$LogLocal
 echo " " >>$LogLocal
 echo "------------------------------------------------------------------------------`r`n" >> $LogLocal
+
+echo "------------------------------------------------------------------------------`r`n" >> $LogLocal
+robocopy $Source3 $Dest3 /s /e /b /z /xo /ts /tee /ns /np /log+:$LogLocal
+echo " " >>$LogLocal
+echo "------------------------------------------------------------------------------`r`n" >> $LogLocal
+
 
 echo "======================================================================" > $ShortLog
 echo '----------------------- S U M M A R Y --------------------------------' >> $ShortLog

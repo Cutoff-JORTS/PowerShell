@@ -10,7 +10,7 @@ $ShortLog = 'D:\Log_Files\Monthly-Summary.txt'								#Local Log = summary
 $LogRemote = '\\192.168.50.164\Personal_Vault\Monthly-Backup-Log.txt'		#Remote Log = full detail + summary
 
 
-$NewXfers = Get-Content $LogLocal -ReadCount 1000 | foreach {$_ -match "New File"}
+$NewXfers = Get-Content $LogLocal -ReadCount 1000 | foreach {$_ -match "New*"}
 $FileCount = $NewXfers.count
 $date= date
 
