@@ -9,9 +9,6 @@ $LogLocal = 'D:\Log_Files\Nightly-Backup-Log.txt'							#Local log = full detail
 $ShortLog = 'D:\Log_Files\Nightly-Summary.txt'								#Local Log = summary
 $LogRemote = '\\192.168.50.164\Personal_Vault\Nightly-Backup-Log.txt'		#Remote Log = full detail + summary
 
-
-$NewXfers = Get-Content $LogLocal -ReadCount 1000 | foreach {$_ -match "New File"}
-$FileCount = $NewXfers.count
 $date= date
 
 $Source1 = 'D:\HDD jason\Dungeons_and_Dragons\'
@@ -39,6 +36,10 @@ echo "--------------------------------------------------------------------------
 robocopy $Source3 $Dest3 /s /e /b /z /xo /ts /tee /ns /np /log+:$LogLocal
 echo " " >>$LogLocal
 echo "------------------------------------------------------------------------------`r`n" >> $LogLocal
+
+
+$NewXfers = "Get-Content $LogLocal -ReadCount 1000 | foreach {$_ -match "New File"}"
+$FileCount = $NewXfers.count
 
 
 echo "======================================================================" > $ShortLog
