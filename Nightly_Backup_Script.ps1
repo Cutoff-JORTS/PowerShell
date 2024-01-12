@@ -38,7 +38,7 @@ echo " " >>$LogLocal
 echo "------------------------------------------------------------------------------`r`n" >> $LogLocal
 
 
-$NewXfers = "Get-Content $LogLocal -ReadCount 1000 | foreach {$_ -match "New File"}"
+$NewXfers = {Get-Content $LogLocal -ReadCount 1000 | foreach {$_ -match "New File"}}
 $FileCount = $NewXfers.count
 
 
