@@ -39,16 +39,16 @@ echo "--------------------------------------------------------------------------
 
 
 $NewXfers = {Get-Content $LogLocal -ReadCount 1000 | foreach {$_ -match "New File"}}
-$FileCount = $NewXfers.count
+$FileCount = @($NewXfers).Count
 
 
 echo "======================================================================" > $ShortLog
 echo '----------------------- S U M M A R Y --------------------------------' >> $ShortLog
 echo "======================================================================`r`n" >> $ShortLog
-echo "Total files added to archives: $FileCount" >> $ShortLog
+echo "Total files added to archives: $(@($NewXfers).Count)" >> $ShortLog
 echo " " >> $ShortLog
-echo "Names of files added to archives: " >> $ShortLog
-echo $NewXfers >> $ShortLog
+echo "Names of files added to archives:" >> $ShortLog
+$NewXfers | ForEach-Object { echo $_ >> $ShortLog }
 echo "`r`n`- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -" >> $ShortLog
 echo "`r`nMost Recent Backup completed as of: $date" >> $ShortLog
 
