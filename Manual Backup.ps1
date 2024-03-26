@@ -35,14 +35,12 @@ echo "--------------------------------------------------------------------------
 echo "======================================================================" > $ShortLog
 echo '----------------------- S U M M A R Y --------------------------------' >> $ShortLog
 echo "======================================================================`r`n" >> $ShortLog
-echo "Total files added to archives: $FileCount" >> $ShortLog
 echo " " >> $ShortLog
-echo "Names of files added to archives: " >> $ShortLog
-echo $NewXfers >> $ShortLog
+echo "Names of files added to archives:" >> $ShortLog
+Get-Content $LogLocal -ReadCount 1000 | foreach { $_ -match "New File" } >> $ShortLog
 echo "`r`n`- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -" >> $ShortLog
 echo "`r`nMost Recent Backup completed as of: $date" >> $ShortLog
 
 copy $LogLocal $LogRemote
 Get-Content -Path $ShortLog >> $LogRemote
 exit 0
-

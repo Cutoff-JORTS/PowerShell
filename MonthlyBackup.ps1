@@ -7,7 +7,7 @@
 
 $LogLocal = 'D:\Log_Files\Monthly-Backup-Log.txt'							#Local log = full detail
 $ShortLog = 'D:\Log_Files\Monthly-Summary.txt'								#Local Log = summary
-$LogRemote = '\\192.168.50.164\Personal_Vault\Monthly-Backup-Log.txt'		#Remote Log = full detail + summary
+$LogRemote = '\\LAB-SERVER\Personal_Vault\Monthly-Backup-Log.txt'		#Remote Log = full detail + summary
 
 
 $NewXfers = Get-Content $LogLocal -ReadCount 1000 | foreach {$_ -match "New*"}
@@ -15,22 +15,22 @@ $FileCount = $NewXfers.count
 $date= date
 
 $Source1 = 'D:\Wallpapers'
-$Dest1 = '\\192.168.50.164\Personal_Vault\Jason_Safe\Photography_Backup\Wallpapers'
+$Dest1 = '\\LAB-SERVER\Personal_Vault\Jason_Safe\Photography_Backup\Wallpapers'
 
 $Source2 = 'D:\HDD jason\Twitch Logos'
-$Dest2 = '\\192.168.50.164\Personal_Vault\Jason_Safe\Jason_Documents\Twitch'
+$Dest2 = '\\LAB-SERVER\Personal_Vault\Jason_Safe\Jason_Documents\Twitch'
 
 $Source3 = 'D:\HDD jason\Documents\Jason Misc. Important Stuff'
-$Dest3 = '\\192.168.50.164\Personal_Vault\Jason_Safe\Jason_Documents'
+$Dest3 = '\\LAB-SERVER\Personal_Vault\Jason_Safe\Jason_Documents'
 
 $Source4 = 'D:\ISO_Library'
-$Dest4 = '\\192.168.50.164\Personal_Vault\Jason_Safe\ISO_Library'
+$Dest4 = '\\LAB-SERVER\Personal_Vault\Jason_Safe\ISO_Library'
 
 $Source5 = 'D:\HDD jason\Pictures'
-$Dest5 = '\\192.168.50.164\Personal_Vault\Jason_Safe\Photography_Backup'
+$Dest5 = '\\LAB-SERVER\Personal_Vault\Jason_Safe\Photography_Backup'
 
 $Source6 = 'D:\HDD jason\Dungeons_and_Dragons\'
-$Dest = '\\192.168.50.164\Dungeons_and_Dragons\'
+$Dest = '\\LAB-SERVER\Dungeons_and_Dragons\'
 
 
 #~~~~~~~~~~~~~~~~~ Script begins here ~~~~~~~~~~~~~~~~~
@@ -59,10 +59,9 @@ echo "--------------------------------------------------------------------------
 echo "======================================================================" > $ShortLog
 echo '----------------------- S U M M A R Y --------------------------------' >> $ShortLog
 echo "======================================================================`r`n" >> $ShortLog
-echo "Total files added to archives: $FileCount" >> $ShortLog
 echo " " >> $ShortLog
-echo "Names of files added to archives: " >> $ShortLog
-echo $NewXfers >> $ShortLog
+echo "Names of files added to archives:" >> $ShortLog
+Get-Content $LogLocal -ReadCount 1000 | foreach { $_ -match "New File" } >> $ShortLog
 echo "`r`n`- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -" >> $ShortLog
 echo "`r`nMost Recent Backup completed as of: $date" >> $ShortLog
 
