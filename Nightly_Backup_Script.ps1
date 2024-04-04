@@ -47,5 +47,4 @@ echo "`r`n`- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -" >> $Sh
 echo "`r`nMost Recent Backup completed as of: $date" >> $ShortLog
 
 copy $LogLocal $LogRemote
-Get-Content -Path $ShortLog >> $LogRemote
 exit 0
