@@ -15,7 +15,7 @@ $FileCount = $NewXfers.count
 $date= date
 
 $Source1 = 'D:\Wallpapers'
-$Dest1 = '\\LAB-SERVER\Personal_Vault\Jason_Safe\Photography_Backup\Wallpapers'
+$Dest1 = '\\LAB-SERVER\Personal_Vault\Jason_Safe\Pictures\Wallpapers'
 
 $Source2 = 'D:\HDD jason\Twitch Logos'
 $Dest2 = '\\LAB-SERVER\Personal_Vault\Jason_Safe\Jason_Documents\Twitch'
@@ -27,10 +27,10 @@ $Source4 = 'D:\ISO_Library'
 $Dest4 = '\\LAB-SERVER\Personal_Vault\Jason_Safe\ISO_Library'
 
 $Source5 = 'D:\HDD jason\Pictures'
-$Dest5 = '\\LAB-SERVER\Personal_Vault\Jason_Safe\Photography_Backup'
+$Dest5 = '\\LAB-SERVER\Personal_Vault\Jason_Safe\Pictures'
 
 $Source6 = 'D:\HDD jason\Dungeons_and_Dragons\'
-$Dest = '\\LAB-SERVER\Dungeons_and_Dragons\'
+$Dest6 = '\\LAB-SERVER\Dungeons_and_Dragons\'
 
 
 #~~~~~~~~~~~~~~~~~ Script begins here ~~~~~~~~~~~~~~~~~
