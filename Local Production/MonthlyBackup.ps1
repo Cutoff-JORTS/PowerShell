@@ -7,7 +7,7 @@
 
 $LogLocal = 'D:\Log_Files\Monthly-Backup-Log.txt'							#Local log = full detail
 $ShortLog = 'D:\Log_Files\Monthly-Summary.txt'								#Local Log = summary
-$LogRemote = '\\LAB-SERVER\Personal_Vault\Monthly-Backup-Log.txt'		#Remote Log = full detail + summary
+$LogRemote = '\\192.168.50.60\Personal_Vault\Monthly-Backup-Log.txt'		#Remote Log = full detail + summary
 
 
 $NewXfers = Get-Content $LogLocal -ReadCount 1000 | foreach {$_ -match "New*"}
@@ -15,22 +15,23 @@ $FileCount = $NewXfers.count
 $date= date
 
 $Source1 = 'D:\Wallpapers'
-$Dest1 = '\\LAB-SERVER\Personal_Vault\Jason_Safe\Pictures\Wallpapers'
+$Dest1 = '\\192.168.50.60\Personal_Vault\Jason_Safe\Pictures\Wallpapers'
+$Dest1 = '\\192.168.50.60\Personal_Vault\Jason_Safe\Pictures\Wallpapers'
 
 $Source2 = 'D:\HDD jason\Twitch Logos'
-$Dest2 = '\\LAB-SERVER\Personal_Vault\Jason_Safe\Jason_Documents\Twitch'
+$Dest2 = '\\192.168.50.60\Personal_Vault\Jason_Safe\Jason_Documents\Twitch'
 
 $Source3 = 'D:\HDD jason\Documents\Jason Misc. Important Stuff'
-$Dest3 = '\\LAB-SERVER\Personal_Vault\Jason_Safe\Jason_Documents'
+$Dest3 = '\\192.168.50.60\Personal_Vault\Jason_Safe\Jason_Documents'
 
 $Source4 = 'D:\ISO_Library'
-$Dest4 = '\\LAB-SERVER\Personal_Vault\Jason_Safe\ISO_Library'
+$Dest4 = '\\192.168.50.60\Personal_Vault\Jason_Safe\ISO_Library'
 
 $Source5 = 'D:\HDD jason\Pictures'
-$Dest5 = '\\LAB-SERVER\Personal_Vault\Jason_Safe\Pictures'
+$Dest5 = '\\192.168.50.60\Personal_Vault\Jason_Safe\Pictures'
 
 $Source6 = 'D:\HDD jason\Dungeons_and_Dragons\'
-$Dest6 = '\\LAB-SERVER\Dungeons_and_Dragons\'
+$Dest6 = '\\192.168.50.60\Dungeons_and_Dragons\'
 
 
 #~~~~~~~~~~~~~~~~~ Script begins here ~~~~~~~~~~~~~~~~~

@@ -5,9 +5,9 @@
 net use * /delete
 
 #Re-maps the drives:
-net use x: \\LAB-SERVER\Personal_Vault /savecred /p:yes
-net use y: \\LAB-SERVER\Dungeons_and_Dragons /savecred /p:yes
-net use z: \\LAB-SERVER\Media /savecred /p:yes
+net use x: \\192.168.50.60\Personal_Vault /savecred /p:yes
+net use y: \\192.168.50.60\Dungeons_and_Dragons /savecred /p:yes
+net use z: \\192.168.50.60\Media /savecred /p:yes
 
 echo "Confirmed, drives are mapped. Exiting in 1s"
 sleep 1

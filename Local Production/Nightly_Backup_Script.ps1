@@ -7,18 +7,18 @@
 
 $LogLocal = 'D:\Log_Files\Nightly-Backup-Log.txt'							#Local log = full detail
 $ShortLog = 'D:\Log_Files\Nightly-Summary.txt'								#Local Log = summary
-$LogRemote = '\\LAB-SERVER\Personal_Vault\Nightly-Backup-Log.txt'		#Remote Log = full detail + summary
+$LogRemote = '\\192.168.50.60\Personal_Vault\Nightly-Backup-Log.txt'		#Remote Log = full detail + summary
 
 $date= date
 
 $Source1 = 'D:\HDD jason\Dungeons_and_Dragons\'
-$Dest1 = '\\LAB-SERVER\Dungeons_and_Dragons\'
+$Dest1 = '\\192.168.50.60\Dungeons_and_Dragons\'
 
 $Source2 = 'D:\HDD jason\Documents\Jason Misc. Important Stuff'
-$Dest2 = '\\LAB-SERVER\Personal_Vault\Jason_Safe\Jason_Documents'
+$Dest2 = '\\192.168.50.60\Personal_Vault\Jason_Safe\Jason_Documents'
 
-$Source3 = 'D:\HDD jason\Videos'
-$Dest3 = '\\LAB-SERVER\Personal_Vault\Jason_Safe\Videos'
+$Source3 = 'D:\HDD jason\Pictures'
+$Dest3 = '\\192.168.50.60\Personal_Vault\Jason_Safe\Pictures'
 
 #~~~~~~~~~~~~~~~~~ Script begins here ~~~~~~~~~~~~~~~~~
 
